@@ -16,7 +16,8 @@ fs.rm(copyDir, {recursive: true, force: true}).finally(function() {
         let copyFileDir = path.join(copyDir, file.name);
         fs.copyFile(mainFileDir, copyFileDir);
       }
+      
     });
+    console.log('Папка скопирована!');
   });
-
 });
