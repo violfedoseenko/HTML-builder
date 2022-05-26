@@ -7,7 +7,7 @@ let writeStream = fs.createWriteStream(path.join(__dirname, 'my_text.txt'));
 stdout.write('Введите текст:');
 
 stdin.on('data', (data) => {
-  if (data.toString() === 'exit') {
+  if (data.toString().trim() === 'exit') {
     finishFunk();
   }
   writeStream.write(data);
